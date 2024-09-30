@@ -1,0 +1,20 @@
+Use Tailwind CSS for styling
+Use Shadcn/UI for components
+Use Next.js as the framework
+Use TypeScript for type safety, and use it properly always.
+Use Zustand for state management
+Use Framer Motion for animations
+Use Supabase for database
+
+ALways use lowercase for file names.
+Always use snake_case for variables, functions, etc.
+Use camelCase for custom hooks.
+Use PascalCase for components and pages.
+
+Types that are used across the app or are global in nature should be in a types/ directory within the src/ directory.
+
+Ensure to separate concerns.
+
+Keep the project modularized, scalable, and easy to maintain. 
+
+You must use react-icons for social media icons. Any other icons should be used from lucide-react.
