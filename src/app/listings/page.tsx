@@ -243,7 +243,7 @@ function AddListingDialog({
           <DialogTitle>Add New Listing</DialogTitle>
         </DialogHeader>
         <form onSubmit={handleSubmit(on_submit)} className="space-y-4">
-          <div className="space-y-4 max-h-[40vh] overflow-y-auto pr-4">
+          <div className="space-y-4 max-h-[50vh] overflow-y-auto pr-4">
             <div className="space-y-2">
               <Label htmlFor="name" className="flex items-center gap-1">
                 First Name
