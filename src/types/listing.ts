@@ -22,6 +22,7 @@ export const listing_schema = z.object({
   contact_instagram: z.string().optional(),
   contact_twitter: z.string().optional(),
   contact_telegram: z.string().optional(),
+  honeypot: z.string().max(0, "This field should be empty"),
 });
 
 export type ListingSchema = z.infer<typeof listing_schema>;

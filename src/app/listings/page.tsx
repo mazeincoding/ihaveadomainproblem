@@ -293,6 +293,14 @@ function AddListingDialog({
                 )}
               </div>
             ))}
+            <Input
+              type="text"
+              id="honeypot"
+              {...register("honeypot")}
+              className="hidden"
+              tabIndex={-1}
+              autoComplete="off"
+            />
           </div>
           <div className="space-y-2 pt-2">
             <Button type="submit" className="w-full" disabled={isSubmitting}>
