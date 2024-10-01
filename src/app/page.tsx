@@ -1,7 +1,8 @@
 import { supabase } from "@/lib/supabase-client";
 import { ConfessionCard } from "@/components/confession-card";
+import { Header } from "@/components/header";
 
-export const revalidate = 0; // Disable caching for this route
+export const revalidate = 0;
 
 export default async function Home() {
   const { count, error } = await supabase
@@ -10,14 +11,16 @@ export default async function Home() {
 
   if (error) {
     console.error("Error fetching confession count:", error);
-    // You might want to add error handling here
   }
 
   const initial_count = count ?? 0;
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-background text-foreground p-4">
-      <ConfessionCard initial_count={initial_count} />
+    <div className="flex flex-col min-h-screen bg-background text-foreground">
+      <Header />
+      <div className="flex-grow flex items-center justify-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full">
+        <ConfessionCard initial_count={initial_count} />
+      </div>
     </div>
   );
 }

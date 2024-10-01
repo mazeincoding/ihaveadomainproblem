@@ -43,7 +43,7 @@ export function ConfessionCard({ initial_count }: { initial_count: number }) {
   };
 
   return (
-    <Card className="w-full max-w-md">
+    <Card className="w-full max-w-lg mx-4">
       <CardHeader className="text-center">
         <Globe className="w-12 h-12 mx-auto text-primary mb-4" />
         <CardTitle className="text-2xl font-bold">
