@@ -249,7 +249,12 @@ function AddListingDialog({
                 First Name
                 <Asterisk className="w-3 h-3 text-red-500" />
               </Label>
-              <Input id="name" {...register("name")} placeholder="John" />
+              <Input
+                id="name"
+                {...register("name")}
+                placeholder="John"
+                tabIndex={-1}
+              />
               {errors.name && (
                 <p className="text-red-500 text-sm">{errors.name.message}</p>
               )}
@@ -263,6 +268,7 @@ function AddListingDialog({
                 id="domain"
                 {...register("domain")}
                 placeholder="example.com"
+                tabIndex={-1}
               />
               {errors.domain && (
                 <p className="text-red-500 text-sm">{errors.domain.message}</p>
@@ -282,6 +288,7 @@ function AddListingDialog({
                   placeholder={
                     method.value === "email" ? "john@example.com" : "username"
                   }
+                  tabIndex={-1}
                 />
                 {errors[`contact_${method.value}` as keyof ListingSchema] && (
                   <p className="text-red-500 text-sm">
