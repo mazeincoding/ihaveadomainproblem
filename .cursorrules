@@ -18,3 +18,5 @@ Ensure to separate concerns.
 Keep the project modularized, scalable, and easy to maintain. 
 
 You must use react-icons for social media icons. Any other icons should be used from lucide-react.
+
+Always write clean, readable and maintainable code. Do not repeat code unnecessarily.
