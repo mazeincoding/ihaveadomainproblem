@@ -219,7 +219,10 @@ function AddListingDialog({
   const on_submit = async (data: ListingSchema) => {
     const form_data = new FormData();
     Object.entries(data).forEach(([key, value]) => {
-      if (value) form_data.append(key, value);
+      // Always include the honeypot field, even if it's empty
+      if (value !== undefined || key === 'honeypot') {
+        form_data.append(key, value ?? '');
+      }
     });
 
     const result = await add_listing(form_data);
